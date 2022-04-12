@@ -96,6 +96,13 @@ function history(){
 			<tr>
 				<td class="DepthEnd">&nbsp;</td>
 			</tr>
+			<% 	if(vo != null){ %>
+			<tr>
+			<td class="Depth03">
+				<a href="/reviews/listReviews.jsp" target="rightFrame">상 품 리 뷰</a>
+			</td>
+			</tr>
+			<%	}  %>
 			<tr>
 				<td class="Depth03">
 					<a href="javascript:history()">최근 본 상품</a>

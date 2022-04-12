@@ -1,49 +1,35 @@
-package com.model2.mvc.service.purchase.impl;
+package com.model2.mvc.service.reviews.impl;
 
 import java.util.Map;
 
 import com.model2.mvc.common.Search;
-import com.model2.mvc.service.purchase.PurchaseService;
-import com.model2.mvc.service.purchase.dao.PurchaseDAO;
-import com.model2.mvc.service.domain.Purchase;
+import com.model2.mvc.service.reviews.ReviewsService;
+import com.model2.mvc.service.reviews.dao.ReviewsDAO;
+import com.model2.mvc.service.domain.Reviews;
 
-public class PurchaseServiceImpl implements PurchaseService {
+public class ReviewsServiceImpl implements ReviewsService {
 	
-	private PurchaseDAO purchaseDAO;
+	private ReviewsDAO reviewsDAO;
 	
-	public PurchaseServiceImpl() {
-		purchaseDAO = new PurchaseDAO();
-	}
-	public void addPurchase(Purchase purchase) throws Exception {
-		purchaseDAO.insertPurchase(purchase);
-	}
-	
-	public Purchase getPurchase(int tranNo) throws Exception {
-		return purchaseDAO.findPurchase(tranNo);
+	public ReviewsServiceImpl() {
+		reviewsDAO = new ReviewsDAO();
 	}
 
-	public Purchase getPurchase2(int ProdNo) throws Exception {
-		System.out.println("Impl 받은 ProdNO"+ProdNo);
-		return purchaseDAO.findPurchase2(ProdNo);
+	public void addReview(Reviews reviews) throws Exception {
+		reviewsDAO.insertReview(reviews);
 	}
 
-	public Map<String, Object> getPurchaseList(Search search, String buyerId) throws Exception {
-		return purchaseDAO.getPurchaseList(search, buyerId);
+	public Reviews getReivew(int reviewNo) throws Exception {
+		return reviewsDAO.findReview(reviewNo);
 	}
 
-	public Map<String, Object> getSaleList(Search search) throws Exception {
-		return purchaseDAO.getSaleList(search);
+	public Map<String, Object> getReviewList(Search search, String userId) throws Exception {
+		return reviewsDAO.getReviewList(search, userId);
 	}
 
-	public void updatePurcahse(Purchase purchase) throws Exception {
-		purchaseDAO.updatePurchase(purchase);
-
+	public void updateReview(Reviews reviews) throws Exception {
+		reviewsDAO.updateReview(reviews);
 	}
 
-	public void updateTranCode(Purchase purchase) throws Exception {
-		System.out.println("Impl 받은 updateTranCode: "+purchase);
-		purchaseDAO.updateTranCode(purchase);
-
-	}
 
 }

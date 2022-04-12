@@ -14,7 +14,6 @@ import com.model2.mvc.common.util.DBUtil;
 import com.model2.mvc.service.domain.Product;
 import com.model2.mvc.service.purchase.PurchaseService;
 import com.model2.mvc.service.purchase.impl.PurchaseServiceImpl;
-//import com.model2.mvc.service.purchase.impl.PurchaseServiceImpl;
 import com.model2.mvc.service.domain.User;
 
 public class ProductDAO {
